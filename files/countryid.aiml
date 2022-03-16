@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+<category>
+    <pattern>Tell me information about <set>countries</set>^</pattern>
+    <template>The capital of <star/> is <map name="countries2capital"><star/></map>.
+    The area of <star/> is <map name="xoraarea"><star/></map>Km2.
+    <star/> is located in <map name="xoresipiroi"><star/></map>.
+    The population of <star/> is <map name="xoresplithismos"><star/></map> miliions.
+    The currency of <star/> is <map name="xoranomisma"><star/></map>.
+    The most famous attraction in <star/> is <map name="xoresmnimia"><star/></map>.
+    The Prime Minister of <star/> is <map name="xoresprothipourgoi"><star/></map>.
+    </template>
+</category>
+</aiml>

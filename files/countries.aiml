@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<category>
+    <pattern>What about countries</pattern>
+    <template>Do you like Greece</template>  
+</category>
+   
+<category>
+    <pattern>Yes</pattern>
+    <that>Do you like Greece</that>
+    <template>Nice, I like Greece too.</template>
+</category>
+   
+<category>
+    <pattern>No</pattern>
+    <that>Do you like Greece</that>
+    <template>Ok! But I like Greece very much.</template>
+</category> 
+
+<category>
+    <pattern>Which is the capital of <set>countries</set>^</pattern>
+    <template>The capital of <star/> is <map name="countries2capital"><star/></map>.
+    </template>
+</category>
+ 
+<category>
+    <pattern>Is <set>countries</set> a country ^</pattern>
+    <template>Yes, <star/> is a country.</template>
+</category>
+ 
+<category>
+    <pattern>Is * a country ^</pattern>
+    <template>No, I don't think it is.</template>
+</category>
+
+<category>
+    <pattern>Which is the capital of *</pattern>
+    <template>I don't know the answer to that.</template>
+</category>
+ 
+<category>
+    <pattern>What about travelling</pattern>
+    <template>Which is the most interesting country you have been</template>  
+</category>
+
+<category>
+    <pattern>What about <set>countries</set>^</pattern>
+    <template>Do you like <star/>?</template>
+</category>
+
+<category>
+    <pattern>Yes</pattern>
+    <template>Nice, I like it too.</template>
+</category>
+
+<category>
+    <pattern>I like *</pattern>
+    <template>I also like <star/>.</template>
+</category>
+
+<category>
+    <pattern> Is * capital of * </pattern>
+    <template>
+        Yes <star index = "1"/> is capital of <star index = "2"/>
+    </template>
+</category>
+
+<category>
+    <pattern>Yes</pattern>
+    <template>Nice, I like it too.</template>
+</category>
+
+<category>
+<pattern>TELL ME ABOUT *</pattern>
+<template>
+<think>
+<set name="countries">
+<star/>
+</set>
+</think>
+Here is some information about
+<formal>
+<star/>
+</formal>.
+<button>
+<text>Click here</text>
+<url>
+https://en.wikipedia.org/wiki/
+<star/>
+</url>
+</button>
+</template>
+</category>
+<category>
+<pattern>SHOW ME A MAP OF *</pattern>
+<template>
+<think>
+<set name="it">
+<star/>
+</set>
+</think>
+Here is a map of
+<formal>
+<star/>
+</formal>
+.
+<button>
+<text>Click here</text>
+<url>
+https://www.google.co.uk/maps?q=
+<star/>
+</url>
+</button>
+</template>
+</category>
+<category>
+<pattern>WHAT IS THE WEATHER IN *</pattern>
+<template>
+<think>
+<set name="countries">
+<star/>
+</set>
+</think>
+I hope it's a nice day in
+<formal>
+<star/>
+</formal>
+.
+<button>
+<text>Click here for the forecast</text>
+<url>
+https://www.weather-forecast.com/locations/
+<star/>
+/forecasts/latest
+</url>
+</button>
+</template>
+</category>
+<category>
+<pattern>TELL ME ABOUT IT</pattern>
+<template>
+<condition name="it">
+<li value="*">
+<srai>
+Tell me about
+<get name="it"/>
+</srai>
+</li>
+<li>Tell you about what?</li>
+</condition>
+</template>
+</category>
+<category>
+<pattern>SHOW ME A MAP OF IT</pattern>
+<template>
+<condition name="it">
+<li value="*">
+<srai>
+Show me a map of
+<get name="it"/>
+</srai>
+</li>
+<li>A map of where?</li>
+</condition>
+</template>
+</category>
+<category>
+<pattern>WHAT IS THE WEATHER LIKE THERE</pattern>
+<template>
+<condition name="it">
+<li value="*">
+<srai>
+What is the weather in
+<get name="it"/>
+</srai>
+</li>
+<li>The weather where?</li>
+</condition>
+</template>
+</category>
+<category>
+<pattern>*</pattern>
+<that>TELL YOU ABOUT WHAT</that>
+<template>
+<srai>
+Tell me about
+<star/>
+</srai>
+</template>
+</category>
+<category>
+<pattern>*</pattern>
+<that>A MAP OF WHERE</that>
+<template>
+<srai>
+show me a map of
+<star/>
+</srai>
+</template>
+</category>
+<category>
+<pattern>*</pattern>
+<that>THe WEATHER WHERE</that>
+<template>
+<srai>
+what is the weather in
+<star/>
+</srai>
+</template>
+</category>
+
+</aiml>

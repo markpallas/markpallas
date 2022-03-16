@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+		<category>
+     <pattern>Which is the longitude of<set>countries</set>^</pattern>
+     <template><star/>, has longitude <map name="xoreslan"><star/></map>.
+     </template>
+ </category>
+ 
+ <category>
+     <pattern>Tell me the longitude of<set>countries</set>^</pattern>
+     <template><star/>, has longitude <map name="xoreslan"><star/></map>.
+     </template>
+ </category>
+	
+</aiml>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+	 <category>
+     <pattern>Which is the currency of<set>countries</set>^</pattern>
+     <template><star/>, has currency <map name="xoranomisma"><star/></map>.
+     </template>
+ </category>
+ 
+<category>
+    <pattern>Is <set>nomisma</set> a currency ^</pattern>
+    <template>Yes, <star/> is a currency.</template>
+</category>
+ 
+<category>
+    <pattern>Is * a currency ^</pattern>
+    <template>No, I don't think it is.</template>
+</category>
+
+<category>
+    <pattern>What about <set>nomisma</set>^</pattern>
+    <template>Do you have <star/>?</template>
+</category>
+
+<category>
+    <pattern>Yes</pattern>
+    <template>Nice, I have too.</template>
+</category>
+
+<category>
+    <pattern>I have *</pattern>
+    <template>I also have <star/>.</template>
+</category>
+
+<category>
+    <pattern> Is * currency of * </pattern>
+    <template>
+        Yes <star index = "1"/> is currency of <star index = "2"/>
+    </template>
+</category>
+
+<category>
+    <pattern>Yes</pattern>
+    <template>Nice, I like it too.</template>
+</category>
+
+<category>
+<pattern>TELL ME ABOUT *</pattern>
+<template>
+<think>
+<set name="nomisma">
+<star/>
+</set>
+</think>
+Here is some information about 
+<formal>
+<star/>
+</formal>
+.
+<button>
+<text>Click here</text>
+<url>
+https://en.wikipedia.org/wiki/
+<star/>
+</url>
+</button>
+</template>
+</category>
+
+
+<category>
+<pattern>TELL ME ABOUT IT</pattern>
+<template>
+<condition name="it">
+<li value="*">
+<srai>
+Tell me about
+<get name="it"/>
+</srai>
+</li>
+<li>Tell you about what?</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>TELL YOU ABOUT WHAT</that>
+<template>
+<srai>
+Tell me about
+<star/>
+</srai>
+</template>
+</category>
+</aiml>
