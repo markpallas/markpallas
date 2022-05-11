@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <category>
-    <pattern>*</pattern>
-    <template>Δεν έχω απάντηση σε αυτό το ερώτημα!</template>
-  </category>
-  
- 
+<category><pattern>*</pattern>
+<template>I have no answer for that</template>
+</category>
+
+ <category>
+ <pattern>ASK USER RANDOM QUESTION</pattern>
+ <template>
+ <random>
+ <li>What is your favorite food?</li>
+ <li>What do you like doing?</li>
+ <li>What did you do last weekend?</li>
+ <li>Do you like sports?</li>
+ <li>What is your hobby?</li>
+ <li>Do you like shopping?</li>
+  <li>Do you like reading?</li>
+ <li>Should we talk about something else?</li>
+ <li>Do you play any video games?</li>
+ <li>What do you do for a living?</li>
+ <li>Do you enjoy our conversation?</li>
+ <li>You can be honest with me. Tell me more!</li>
+ <li>Please be more direct and clear.</li>
+ <li>What makes you happy?</li>
+ <li>Ask me a personal question.</li>
+ <li>Ask me a question.</li>
+ <li>How are you feeling today?</li>
+ <li>Do you watch TV?</li>
+ <li>Have you read any good books lately?</li>
+ <li>Have you seen a good movie lately?</li>
+ <li>Do you have any pets?</li>
+ <li>Do you have any siblings?</li>
+ <li>What shows are you into?</li>
+ <li>Are you usually early or late?</li>
+ <li>What is your drink of choice on a hot day?</li>
+ <li>Whice drink would you describe as most refreshing?</li>
+ <li>What’s your favorite drink?</li>
+ <li>What’s your dream car?</li>
+ <li>What skill would you like to master?</li>
+<li>What do you wish you knew more about?</li>
+ <li>What’s the best way to start the day?</li>
+ <li>How do you relax after a hard day of work?</li>
+ <li>What would be your ideal way to spend the weekend?</li>
+ <li>What is the luckiest thing that has happened to you?</li>
+ <li>What is the most impressive thing you know how to do?</li>
+ <li>What hobby would you get into if time and money weren’t an issue?</li>
+ <li>What's new?</li>
+ <li>How is your day?</li>
+ <li>What is the weather like there?</li>
+ <li>What are you doing right now?</li>
+ <li>Do you have kids?</li>
+ </random>
+ </template>
+ </category>
+
 </aiml>

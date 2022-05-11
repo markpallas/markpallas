@@ -1,63 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
+	<!-- insert your AIML categories here -->
 	 <category>
-     <pattern>Ποιο είναι το νόμισμα της χώρας <set>countries</set>^</pattern>
-     <template>Η χώρα <star/>, έχει νόμισμα <map name="xoranomisma"><star/></map>.
+     <pattern>Which is the currency of<set>countries</set>^</pattern>
+     <template><star/>, has currency <map name="xoranomisma"><star/></map>.
      </template>
  </category>
  
 <category>
-    <pattern>Είναι το <set>nomisma</set> νόμισμα ^</pattern>
-    <template>Ναι, το <star/> είναι νόμισμα.</template>
+    <pattern>Is <set>nomisma</set> a currency ^</pattern>
+    <template>Yes, <star/> is a currency.</template>
 </category>
  
 <category>
-    <pattern>Είναι το  * νόμισμα ^</pattern>
-    <template>Όχι δεν νομίζω ότι είναι.</template>
+    <pattern>Is * a currency ^</pattern>
+    <template>No, I don't think it is.</template>
 </category>
 
 <category>
-    <pattern>Πες μου για το νόμισμα <set>nomisma</set>^</pattern>
-    <template>Έχεις <star/>?</template>
+    <pattern>What about <set>nomisma</set>^</pattern>
+    <template>Do you have <star/>?</template>
 </category>
 
 <category>
-    <pattern>Ναι</pattern>
-    <template>Ωραία έχω και εγώ.</template>
+    <pattern>Yes</pattern>
+    <template>Nice, I have too.</template>
 </category>
 
 <category>
-    <pattern>Έχω νομίσματα *</pattern>
-    <template>Έχω επίσης νομίσματα <star/>.</template>
+    <pattern>I have *</pattern>
+    <template>I also have <star/>.</template>
 </category>
 
 <category>
-    <pattern> Είναι το  * νόμισμα της χώρας * </pattern>
+    <pattern> Is * currency of * </pattern>
     <template>
-        Ναι <star index = "1"/> είναι νόμισμα της <star index = "2"/>
+        Yes <star index = "1"/> is currency of <star index = "2"/>
     </template>
 </category>
 
 <category>
-<pattern>Δώσε μου πληροφορίες για το νόμισμα *</pattern>
+    <pattern>Yes</pattern>
+    <template>Nice, I like it too.</template>
+</category>
+
+<category>
+<pattern>TELL ME ABOUT *</pattern>
 <template>
 <think>
 <set name="nomisma">
 <star/>
 </set>
 </think>
-Ορίστε μερικές πληροφορίες σχτικά με το 
+Here is some information about 
 <formal>
 <star/>
 </formal>
 .
 <button>
-<text>Πάτησε εδώ</text>
+<text>Click here</text>
 <url>
 https://en.wikipedia.org/wiki/
 <star/>
 </url>
 </button>
+</template>
+</category>
+
+
+<category>
+<pattern>TELL ME ABOUT IT</pattern>
+<template>
+<condition name="it">
+<li value="*">
+<srai>
+Tell me about
+<get name="it"/>
+</srai>
+</li>
+<li>Tell you about what?</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>TELL YOU ABOUT WHAT</that>
+<template>
+<srai>
+Tell me about
+<star/>
+</srai>
 </template>
 </category>
 </aiml>

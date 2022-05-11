@@ -2,14 +2,14 @@
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
 	<category>
-     <pattern>Ποιο ειναι το γεωγραφικό πλάτος της χώρας<set>countries</set>^</pattern>
-     <template>Η χώρα <star/>, έχει γεωγραφικό πλάτος <map name="xoreslan"><star/></map>.
+     <pattern>Which is the latitude of<set>countries</set>^</pattern>
+     <template><star/>, has latitude <map name="xoreslan"><star/></map>.
      </template>
  </category>
  
  <category>
-     <pattern>Πες μου το γεωγραφικό πλάτος της χώρας<set>countries</set>^</pattern>
-     <template>Η χώρα <star/>, έχει γεωγραφικό πλάτος <map name="xoreslan"><star/></map>.
+     <pattern>Tell me the latitude of<set>countries</set>^</pattern>
+     <template><star/>, has latitude <map name="xoreslan"><star/></map>.
      </template>
  </category>
  
