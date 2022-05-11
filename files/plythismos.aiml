@@ -3,14 +3,14 @@
 	<!-- insert your AIML categories here -->
 	
 <category>
-     <pattern>Which is the population of<set>countries</set>^</pattern>
-     <template><star/>, has population <map name="xoresplithismos"><star/></map> millions.
+     <pattern>Ποιος είναι ο πληθυσμός στην πόλη <set>poleis</set>^</pattern>
+     <template>Η πόλη <star/>, έχει πληθυσμό <map name="xoresplithismos"><star/></map> εκατομμύρια.
      </template>
  </category>
  
  <category>
-     <pattern>Tell me the population of<set>countries</set>^</pattern>
-     <template><star/>, has population <map name="xoresplithismos"><star/></map> millions.
+     <pattern>Πες μου για τον πληθυσμό  στην πόλη<set>poleis</set>^</pattern>
+     <template>Η πόλη <star/>, έχει πληθυσμό <map name="xoresplithismos"><star/></map> εκατομμύρια.
      </template>
  </category>
  
